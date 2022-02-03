@@ -9,7 +9,7 @@ pcall(function()
        wait(10)
        game.StarterGui:SetCore("SendNotification", {
         Title = 'you are NOT in the group';
-        Text = 'the crash will still work but our group link was copied to your clipboard thx';
+        Text = 'the crash will still work but our group link was copied to your clipboard';
         Duration = 20;
        })
        setclipboard('https://www.roblox.com/groups/13676390/Termed#!/about')

